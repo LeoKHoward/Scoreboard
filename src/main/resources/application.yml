@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+info:
+  app:
+    name: Scoreboard
+    version: 1.0
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:6432/postgres
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_schema: scoreboard
+  sql:
+    init:
+      mode: always
